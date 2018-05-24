@@ -15,9 +15,6 @@ import { Marquee } from 'wzw-components';
 // 引入样式
 @import "node_modules/iyb-marquee/lib/styles/components.scss";
 ```
-## API
-API全部说明文档
-
 
 ### 代码演示
 
