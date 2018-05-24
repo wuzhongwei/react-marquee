@@ -4,15 +4,51 @@ react-dom > 15.6.2 以上
 
 ## 引入方式 npm
 ```javascript
-npm install iyb-marquee --save
+npm install wzw-components --save
 ```
 
 ## Usage 使用
 ```javascript
 import { Marquee } from 'wzw-components';
 
+
 // 引入样式
 @import "node_modules/iyb-marquee/lib/styles/components.scss";
+```
+## API
+API全部说明文档
+
+### Marquee 提示层
+[toast](http://gitlab.zhonganonline.com/iyunbao/iyb-components/blob/master/docs/components/toast.md)
+
+### 代码演示
+
+#### 基本用法
+
+###### 普通(默认是纵向、间歇滚动)
+```jsx
+<Marquee>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</Marquee>
+```
+
+###### 横向滚动(横向、间歇滚动)
+```jsx
+<Marquee direction="landscape">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</Marquee>
+```
+###### 横向滚动(横向、连续滚动)
+```jsx
+<Marquee direction="landscape" continuous>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</Marquee>
 ```
 
 Api
