@@ -1,5 +1,5 @@
 {
-  "name": "iyb-components",
+  "name": "wzw-components",
   "version": "1.0.3",
   "description": "common components",
   "keywords": [
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git@github.com:wuzhongwei/react-marquee.git"
   },
-  "author": "wuzhongwei@iyunbao.com",
+  "author": "94050803@qq.com",
   "license": "MIT",
   "scripts": {
     "dev": "node ./scripts/server.js",
