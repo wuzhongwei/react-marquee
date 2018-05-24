@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 
-// import { Toast, Icon } from '../lib';
+// import { Marquee } from '../lib';
 
 import { Marquee } from '../components';
 
@@ -20,18 +20,10 @@ class App extends PureComponent {
   render() {
     return (
       <div className="form-wrap">
-        <Marquee direction="vertical" className="gundong">
-          <div className="ww">1111</div>
-          <div>11112</div>
-          <div>11113</div>
-          <div>11114</div>
-          <div>11115</div>
-          <div>11116</div>
-          <div>11117</div>
-          <div>11118</div>
-          <div>11119</div>
+        <Marquee>
+          <div>22222</div>
         </Marquee>
-        <Marquee continuous direction="landscape" className="gundong1">
+        <Marquee continuous direction="landscape">
           <div className="cc">8833333333333333333333333333333333388</div>
         </Marquee>
       </div>

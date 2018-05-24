@@ -9,7 +9,7 @@ npm install iyb-marquee --save
 
 ## Usage 使用
 ```javascript
-import { Marquee } from 'iyb-marquee';
+import { Marquee } from 'wzw-components';
 
 // 引入样式
 @import "node_modules/iyb-marquee/lib/styles/components.scss";

@@ -2,11 +2,14 @@
 
 .iyb-marquee-vertical {
   overflow: hidden;
+  height: 20px;
 }
 
 .iyb-marquee-landscape {
   overflow: hidden;
   position: relative;
+  height: 20px;
+  width: 100px;
 
   .iyb-marquee-landscape-wrap {
     position: absolute;

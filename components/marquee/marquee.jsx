@@ -23,7 +23,7 @@ class Index extends Component {
   }
   componentDidMount() {
     this.parseItems(this.props);
-
+    this.startAutoPlay(this.props);
     events.on(this.swipeItems, 'webkitTransitionEnd', this.transitionEnd);
     events.on(this.swipeItems, 'transitionend', this.transitionEnd);
     this.doTransition(this.props.activeIndex, this.props.speed);
@@ -57,6 +57,15 @@ class Index extends Component {
     }
   }
   startAutoPlay(props) {
+    const obj = this.swipeItems.children[0];
+    const child = props.children;
+    const value = props.direction === 'vertical' ? obj.offsetHeight : obj.offsetWidth;
+    const parent = this.swipeItems.parentNode;
+    const wrapVal = props.direction === 'vertical' ? parent.offsetHeight : parent.offsetWidth;
+    const len = child.length ? child.length : 1;
+    if (child.length === 0 || wrapVal > len * value) {
+      return;
+    }
     this.moveInterval = setInterval(() => {
       const newLocal = this.state.activeIndex;
       let activeIndex = newLocal;
@@ -94,7 +103,6 @@ class Index extends Component {
     }
     if (wrapVal < len * val) {
       items = [].concat(child, child);
-      this.startAutoPlay(props);
     } else {
       items = [].concat(child);
     }
