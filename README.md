@@ -18,8 +18,6 @@ import { Marquee } from 'wzw-components';
 ## API
 API全部说明文档
 
-### Marquee 提示层
-[toast](http://gitlab.zhonganonline.com/iyunbao/iyb-components/blob/master/docs/components/toast.md)
 
 ### 代码演示
 
