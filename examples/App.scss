@@ -1,0 +1,37 @@
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+body {
+  background: #eee;
+}
+
+.gundong {
+  background: rgba(0, 0, 0, .7);
+  border-radius: 10px;
+  color: #fff;
+  width: 100px;
+  text-align: center;
+  margin: 20px;
+  height: 100px;
+}
+
+.gundong1 {
+  background: rgba(0, 0, 0, .7);
+  border-radius: 10px;
+  color: #fff;
+  width: 100px;
+  height: 20px;
+  text-align: center;
+  margin: 20px;
+}
+

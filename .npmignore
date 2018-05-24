@@ -1,0 +1,13 @@
+node_modules
+components
+examples
+src
+scripts
+.DS_Store
+.eslintignore
+.eslintrc
+.gitignore
+.stylelintrc
+.travis.yml
+lib/**/__tests__/*.*
+

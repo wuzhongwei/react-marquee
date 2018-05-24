@@ -1,0 +1,23 @@
+@import "../../styles/variables";
+
+.iyb-marquee-vertical {
+  overflow: hidden;
+}
+
+.iyb-marquee-landscape {
+  overflow: hidden;
+  position: relative;
+
+  .iyb-marquee-landscape-wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20000px;
+    overflow: hidden;
+
+    .iyb-marquee-landscape-item {
+      float: left;
+    }
+  }
+}
+
