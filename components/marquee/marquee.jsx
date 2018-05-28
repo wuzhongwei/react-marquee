@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { events } from '../utils';
 
-
 class Index extends Component {
   constructor(props) {
     super(props);
@@ -30,16 +29,18 @@ class Index extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    console.log('this.props', this.props.children);
+    console.log('nextProps', nextProps.children);
     if ('children' in nextProps) {
+      this.pauseAutoPlay();
       this.parseItems(nextProps);
-    }
-
-    if ('activeIndex' in nextProps) {
-      this.doTransition(nextProps.activeIndex, nextProps.speed);
+      this.startAutoPlay(nextProps);
+      this.doTransition(nextProps.activeIndex, 0);
     }
   }
   componentWillUnmount() {
     // 自动轮播结束
+    console.log('结束');
     this.pauseAutoPlay();
     // 移除监听窗口变化
     events.off(this.swipeItems, 'webkitTransitionEnd', this.transitionEnd);
@@ -90,7 +91,7 @@ class Index extends Component {
     }, props.continuous ? 30 : this.props.timer);
   }
   // 是否复制
-  parseItems(props) {
+  parseItems(props, callback = () => {}) {
     let items = [];
     const obj = this.swipeItems.children[0];
     const child = props.children;
@@ -107,9 +108,10 @@ class Index extends Component {
       items = [].concat(child);
     }
     const newItems = this.newCreateData(items);
+
     this.setState({
       items: newItems,
-    });
+    }, callback);
   }
   // 创建子元素
   newCreateData(items) {
