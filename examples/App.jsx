@@ -1,50 +1,24 @@
 import React, { PureComponent } from 'react';
 // import { Marquee } from '../lib';
-
+import PropTypes from 'prop-types';
 import { Marquee } from '../components';
 
 import '../components/styles/index.scss';
 import './App.scss';
 
-class App extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      list: [1, 2, 3],
-      test: '33333332222222222222226666666666',
-    };
-  }
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        list: [33, 4, 5, 6, 7, 8, 9],
-      });
-    }, 2000);
-  }
-  createList() {
-    const { list } = this.state;
 
-    return (
-      <Marquee>
-        {
-          list.map((itme) => {
-           return (
-             <div className="li">{ itme }</div>
-           );
-          })
-        }
-      </Marquee>
-    );
+class App extends PureComponent {
+  static childContextTypes = {
+    store: PropTypes.object
   }
+
   render() {
-    const { list, test } = this.state;
+   
     return (
       <div className="form-wrap">
-        { list.length > 0 ? this.createList() : null }
-        <Marquee direction="landscape" continuous>
-          <div className="cc">{test}</div>
+        <Marquee direction="landscape" continuous={true} >
+          <div>依照保监要求，为了保障您的利益，请准确填写以下实名信息。本平台将通过保监会官方渠道验证您的资质，并庄重承诺对您所提供的个人及相关验证信息严格保密。</div>
         </Marquee>
-
       </div>
     );
   }
